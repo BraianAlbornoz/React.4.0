@@ -1,14 +1,16 @@
 import { Grid } from "@mui/material"
+// Componentes
 import CardItem from "../Card/Carditem"
 
 const ItemList =( {products} )=>{
     return(
         <>
-            <Grid >
+            <Grid container spacing={2}>
                 {
                     products.map((products)=> {
                         return(
-                            <Grid item md={5} key={products.id}>
+
+                            <Grid item md={3} key={products.id} >
                                 <CardItem products={products}/>
                             </Grid>
                         )

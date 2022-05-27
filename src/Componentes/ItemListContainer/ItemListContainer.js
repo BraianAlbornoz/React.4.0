@@ -1,7 +1,7 @@
 import { useEffect,useState } from 'react';
 import './ItemListContainer.css'
-
 import {Grid} from '@mui/material';
+// Componentes
 import ItemList from '../itemList/ItemList';
 
 const ItemListContainer = ( {title}) =>{
@@ -9,10 +9,10 @@ const ItemListContainer = ( {title}) =>{
     const [products, setProducts] = useState([])
     
     const productosMock = [
-        {title : 'Remera Karasuno', price:1500, image:'', stock: 5, id: 1},
-        {title : 'Remera Karasuno', price:1500, image:'', stock: 5, id: 2},
-        {title : 'Remera Karasuno', price:1500, image:'', stock: 5, id: 3},
-        {title : 'Remera Karasuno', price:1500, image:'', stock: 5, id: 4},
+        {title : 'Remera Karasuno', price:1500, image:'gon.jpg', stock: 5, id: 1},
+        {title : 'Remera Karasuno', price:1500, image:'gon.jpg', stock: 5, id: 2},
+        {title : 'Remera Karasuno', price:1500, image:'gon.jpg', stock: 5, id: 3},
+        {title : 'Remera Karasuno', price:1500, image:'gon.jpg', stock: 5, id: 4},
     ];
 
     const getProducts = () => {
@@ -27,6 +27,7 @@ const ItemListContainer = ( {title}) =>{
         getProducts()
         .then( (response) => {
          setProducts(response)
+         console.log(response)
         })
         .catch( (err) => {
              console.log("Fallo la llamada.", err)
@@ -40,12 +41,11 @@ const ItemListContainer = ( {title}) =>{
     return(
         <> 
             <h2>{title}</h2>
-            <Grid container>
-                <Grid item md={10} >
-                    <ItemList products={products}/>
-                </Grid>
-                
-            </Grid> 
+
+            <Grid >
+                <ItemList products={products}/>
+            </Grid>
+            
         </>
     );
 }
