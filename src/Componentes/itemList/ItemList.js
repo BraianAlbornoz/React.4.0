@@ -1,6 +1,6 @@
 import { Grid } from "@mui/material"
 // Componentes
-import CardItem from "../Card/Carditem"
+import Item from "../Item/Item"
 
 const ItemList =( {products} )=>{
     return(
@@ -11,12 +11,14 @@ const ItemList =( {products} )=>{
                         return(
 
                             <Grid item md={3} key={products.id} >
-                                <CardItem products={products}/>
+
+                                <Item products={products} />
+
                             </Grid>
                         )
                     })
                 }
-        
+                
             </Grid>
         </>   
     )

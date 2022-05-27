@@ -1,4 +1,4 @@
-import './Carditem.css'
+import './Item.css'
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 // Componentes
@@ -6,7 +6,7 @@ import ItemCount from '../ItemCount/ItemCount.js';
 
 
 
-const Carditem = ({products})=> {
+const Item = ({products})=> {
 
   return (
 
@@ -20,10 +20,10 @@ const Carditem = ({products})=> {
           <p>{products.title}</p>
           <span>{products.price}</span>
 
-        <ItemCount title={`${products.title}`} />
+        <ItemCount products={products} />
           
       </CardContent>
     </Card>
   );
 }
-export default Carditem
+export default Item

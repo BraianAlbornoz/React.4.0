@@ -2,10 +2,10 @@ import { Button } from "@mui/material";
 import './ItemCount.css';
 import { useState } from 'react';
 
-const ItemCount = ({title}) =>{
+const ItemCount = ({products}) =>{
 
     const [count,setCount] = useState (1)
-    const [stock,setStock] = useState (5)
+    const [stock,setStock] = useState (products.stock)
 
     const addCount=()=>{
         if(count < stock)
@@ -22,7 +22,7 @@ const ItemCount = ({title}) =>{
         if(stock === 0){
             console.log("No hay stock Disponible")
         }else{
-            console.log(`Usted compro ${count} ${title}`)
+            console.log(`Usted compro ${count} ${products.title}`)
             setStock (stock - count)
         }
         
