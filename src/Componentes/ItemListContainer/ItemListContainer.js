@@ -41,7 +41,7 @@ const ItemListContainer = ( {title}) =>{
         <> 
             <h2>{title}</h2>
             <Grid container>
-                <Grid md={10} className="uwu">
+                <Grid item md={10} >
                     <ItemList products={products}/>
                 </Grid>
                 
