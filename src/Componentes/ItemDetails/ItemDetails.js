@@ -13,20 +13,18 @@ const ItemDetails =({data})=>{
             </div>
 
             <CardContent>
-                <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
-                    Word of the Day
+                
+                <Typography variant="h5" component="div">
+                    {data.title}
                 </Typography>
                 <Typography variant="h5" component="div">
-                    benevolent
+                    ${data.price}
                 </Typography>
-                <Typography sx={{ mb: 1.5 }} color="text.secondary">
-                    adjective
+                <Typography variant="h5" component="div">
+                    STOCK: {data.stock}uni.
                 </Typography>
-                <Typography variant="body2">
-                    well meaning and kindly.
-                    <br />
-                    {'"a benevolent smile"'}
-                </Typography>
+                
+                
             </CardContent>
             
         </CardContent>
