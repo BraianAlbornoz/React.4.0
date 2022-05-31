@@ -3,6 +3,7 @@ import {Container } from '@mui/material';
 // Componentes
 import ButtonAppBar from './Componentes/NavBar/NavBar';
 import ItemListContainer from './Componentes/ItemListContainer/ItemListContainer';
+import ItemDetailsContainer from './Componentes/ItemDetailsContainer/ItemDetailsContainer';
 
 function App() {
   return (
@@ -12,9 +13,9 @@ function App() {
 
       <Container className='general-container'>
         <ItemListContainer title={'Producto Recomendado'} />
-        <ItemListContainer title={'Producto Relacionados'} />
-        
       </Container>
+
+      <ItemDetailsContainer/>
       
     </div>
   );
